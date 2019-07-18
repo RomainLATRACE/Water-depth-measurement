@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <Button
+        android:id="@+id/button_list"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_list"
+        android:text="Press to refresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#34495e"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/mChart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_list" />
+
+
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_enable_button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Auto sampling"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="10dp"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:thumb="@drawable/sw_thumb"
+        app:track="@drawable/sw_track"
+        app:showText="true"
+        app:layout_constraintBottom_toTopOf="@+id/mChart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_list"
+        tools:ignore="MissingConstraints" />
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/mChart"
+        android:layout_width="360dp"
+        android:layout_height="320dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="270dp"
+        android:layout_height="25dp"
+        android:text="blublu"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="10dp"
+        android:min="10"
+        android:max="90"
+        android:progress="0"
+        android:progressDrawable="@drawable/track"
+        android:thumb="@drawable/thumb"
+        android:indeterminate="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toEndOf="@+id/textview"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Number of samples"
+        android:textColor="#070707"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textSampNumber"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="#CC0707"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekbar"
+        tools:ignore="MissingConstraints" />
+
+
+    <SeekBar
+        android:id="@+id/seekbar2"
+        android:layout_width="270dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="0dp"
+        android:indeterminate="false"
+        android:max="2"
+        android:min="0"
+        android:progress="0"
+        android:progressDrawable="@drawable/track2"
+        android:thumb="@drawable/thumb2"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar"
+        app:layout_constraintStart_toEndOf="@+id/textview2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Sampling frequency"
+        android:textColor="#070707"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textview"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textFreqNumber"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#2980b9"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textSampNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekbar2"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp" />
+
+
+</android.support.constraint.ConstraintLayout>
