@@ -4,5 +4,8 @@ Développer un système capable de neutraliser des "golden Apple snails", molusc
 
 Arduino, Android Studio, Java
 
+
+
   --> objectif: contruire un système qui doit calculer la profondeur de l'eau à distance (embarquation sur un drone)
+  
   --> développement d'une application androïd afin de visaliser les informations en direct et à distance du système.
