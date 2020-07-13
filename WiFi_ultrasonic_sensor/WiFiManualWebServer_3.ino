@@ -20,8 +20,8 @@ const unsigned long MEASURE_TIMEOUT = 25000UL; // 25ms = ~8m à 340m/s
 const float SOUND_SPEED = 340.0 / 1000;
 
 
-const char* ssid = "FAB"; //name of device which share the connexion
-const char* password = "petitFab";  //password to access to this network 
+const char* ssid = "RL"; //name of device which share the connexion
+const char* password = "azertyuiop";  //password to access to this network 
 int val;
 
 /* Create an instance of the server
