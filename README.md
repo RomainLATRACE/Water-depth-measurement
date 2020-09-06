@@ -6,6 +6,6 @@ Arduino, Android Studio, Java
 
 
 
-  --> objectif: contruire un système qui doit calculer la profondeur de l'eau à distance (embarquation sur un drone)
+  --> objectif: contruire un système qui puisse calculer la profondeur de l'eau à distance (embarquation sur un drone prévue)
   
   --> développement d'une application androïd afin de visaliser les informations en direct et à distance du système.
